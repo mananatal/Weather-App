@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Weather App</h1>
+
+        <!-- tab switching container -->
+        <div class="tabContainer">
+            <p class="tab" user-tab>Your Weather</p>
+            <p class="tab" search-tab>Search Weather</p>
+            
+        </div>
+
+        <div class="container ">
+            <!--Grant location access container-->
+            <div class="subContainer grantLocationContainer">
+                <img src="./Images/location.png" loading="lazy" height="80" width="80">
+                <p>Grant Location Access</p>
+                <p>Allow access to get weather information</p>
+                <button class="btn" location-permission>Grant Access</button>
+
+            </div>
+
+                <!--Search Weather Container-->
+                <div class="subContainer " >
+                    <form class="formContainer" form-container>
+                        
+                    <input placeholder="Search For City..." data-input>
+                    <button class="btn"><img src="./Images/search.png" height="25" width="25"></button>
+                        
+                    </form>
+    
+                </div>
+
+            
+
+            <!--User Weather container-->
+            <div class="userInfoContainer subContainer">
+
+                <div class="name">
+                    <p city-name></p>
+                    <img country-flag>
+                </div>
+
+                <p weather-desc></p>
+                <img weather-desc-img>
+
+                <p data-temp></p>
+
+             <!--Parameters Container-->
+
+             <div class="parameterContainer">
+                 <!-- Wind Speed -->
+            <div class="parameter">
+                <img src="Images/wind.png" alt="#" />
+                <p>windspeed</p>
+                <p class="parameterValue" data-windspeed></p>
+              </div>
+  
+              <!-- Humidity -->
+              <div class="parameter">
+                <img src="Images/humidity.png" alt="#" />
+                <p>humidity</p>
+                <p class="parameterValue" data-humidity></p>
+              </div>
+  
+              <!-- Wind Speed -->
+              <div class="parameter">
+                <img src="Images/cloud.png" alt="#" />
+                <p>clouds</p>
+                <p class="parameterValue" data-clouds></p>
+              </div>
+             </div>
+
+            </div>
+
+        
+
+            <!--Loading container-->
+            <div class="subContainer loadingContainer">
+                <img src="./Images/loading.gif" loading="lazy" height="150" width="150">
+                <p>Loading</p>
+            </div>
+
+            <!--Error Message-->
+            <div class="errorContainer subContainer">
+                <img src="./Images/not-found.png" loading="lazy" height="250" width="250">
+                <p>Failed to Fetch</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
